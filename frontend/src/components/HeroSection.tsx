@@ -1,21 +1,47 @@
+import type { CSSProperties } from "react";
+import type { InputFieldMeta } from "../types/api";
+import { PredictivePanel } from "./PredictivePanel";
+
 type HeroSectionProps = {
-  onDemoClick: () => void;
+  fadeProgress: number;
+  inputs: InputFieldMeta[];
+  loading?: boolean;
+  summaryError?: string | null;
 };
 
-export const HeroSection = ({ onDemoClick }: HeroSectionProps) => (
-  <section className="hero-section">
-    <div className="hero-content">
-      <p className="hero-kicker">Praedium</p>
-      <h1>Institutional-grade credit intelligence for real assets.</h1>
-      <p>
-        Translate operating data into an actionable credit view powered by
-        modern machine learning and the rigor of commercial real estate
-        underwriting.
-      </p>
-      <button className="primary-btn" onClick={onDemoClick}>
-        Demo the tool
-      </button>
-    </div>
-  </section>
-);
+export const HeroSection = ({
+  fadeProgress,
+  inputs,
+  loading,
+  summaryError,
+}: HeroSectionProps) => {
+  const heroStyle = {
+    "--hero-fade": fadeProgress,
+  } as CSSProperties;
 
+  return (
+    <section className="hero-section" style={heroStyle}>
+      <div className="hero-overlay" aria-hidden="true" />
+      <div className="hero-content">
+        <div className="hero-title">
+          <p className="hero-eyebrow">Praedium</p>
+          <h1>Credit intelligence for the next era of real assets.</h1>
+          <p className="hero-lede">
+            One connected view of NOI, leverage, capital structure, and coverage
+            so investment teams can defend a rating before stepping into the
+            room.
+          </p>
+        </div>
+        <PredictivePanel
+          inputs={inputs}
+          loading={loading}
+          summaryError={summaryError}
+          variant="hero"
+          title="Demo the Praedium model"
+          subtitle="Each field maps directly to the backend logistic regression engine."
+        />
+        <div className="hero-scroll-hint">Scroll to explore the thesis</div>
+      </div>
+    </section>
+  );
+};

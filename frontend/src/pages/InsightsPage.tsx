@@ -19,28 +19,30 @@ export const InsightsPage = () => {
   }, []);
 
   return (
-    <section className="insights-page">
+    <section className="insights-view">
       <header>
         <h2>Feature correlations</h2>
         <p>
-          Dive deeper into the variables that most influence Praedium’s credit
-          view.
+          See how each operating input contributes to Praedium’s credit view.
+          We render the backend correlation plots so your team never works from
+          a black box.
         </p>
       </header>
       {error && <p className="form-error">{error}</p>}
-      {chart ? (
-        <img
-          src={`data:image/png;base64,${chart}`}
-          alt="Praedium correlation plots"
-        />
-      ) : (
-        !error && <p className="status-text">Loading visuals…</p>
-      )}
+      <div className="insights-card">
+        {chart ? (
+          <img
+            src={`data:image/png;base64,${chart}`}
+            alt="Praedium correlation plots"
+          />
+        ) : (
+          !error && <p className="status-text">Loading visuals…</p>
+        )}
+      </div>
       <Link to="/" className="primary-btn secondary">
         Back to landing
       </Link>
     </section>
   );
 };
-
 

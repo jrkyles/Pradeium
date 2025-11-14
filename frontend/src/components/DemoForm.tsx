@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { useEffect, useMemo, useState } from "react";
 import type { FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
@@ -8,14 +7,12 @@ import { usePrediction } from "../context/PredictionContext";
 
 type DemoFormProps = {
   inputs: InputFieldMeta[];
-  isVisible: boolean;
   loading?: boolean;
   summaryError?: string | null;
 };
 
 export const DemoForm = ({
   inputs,
-  isVisible,
   loading = false,
   summaryError = null,
 }: DemoFormProps) => {
@@ -81,43 +78,40 @@ export const DemoForm = ({
   };
 
   return (
-    <div className={clsx("demo-form", { open: isVisible })}>
-      <form onSubmit={handleSubmit}>
-        {loading && <p className="status-text">Loading inputs…</p>}
-        {!loading && summaryError && (
-          <p className="form-error">{summaryError}</p>
-        )}
-        {sortedInputs.length > 0 && (
-          <div className="form-grid">
-            {sortedInputs.map((input) => (
-              <label key={input.key}>
-                <span>{input.label}</span>
-                <input
-                  type="number"
-                  step="any"
-                  value={formValues[input.key] ?? ""}
-                  placeholder={`${input.min} – ${input.max}`}
-                  onChange={(event) =>
-                    setFormValues((prev) => ({
-                      ...prev,
-                      [input.key]: event.target.value,
-                    }))
-                  }
-                />
-              </label>
-            ))}
-          </div>
-        )}
-        {error && <p className="form-error">{error}</p>}
-        <button
-          className="primary-btn"
-          type="submit"
-          disabled={isSubmitting || loading || !sortedInputs.length}
-        >
-          {isSubmitting ? "Predicting..." : "Predict"}
-        </button>
-      </form>
-    </div>
+    <form className="demo-form" onSubmit={handleSubmit}>
+      {loading && <p className="status-text">Loading inputs…</p>}
+      {!loading && summaryError && (
+        <p className="form-error">{summaryError}</p>
+      )}
+      {sortedInputs.length > 0 && (
+        <div className="form-grid">
+          {sortedInputs.map((input) => (
+            <label key={input.key}>
+              <span>{input.label}</span>
+              <input
+                type="number"
+                step="any"
+                value={formValues[input.key] ?? ""}
+                placeholder={`${input.min} – ${input.max}`}
+                onChange={(event) =>
+                  setFormValues((prev) => ({
+                    ...prev,
+                    [input.key]: event.target.value,
+                  }))
+                }
+              />
+            </label>
+          ))}
+        </div>
+      )}
+      {error && <p className="form-error">{error}</p>}
+      <button
+        className="primary-btn"
+        type="submit"
+        disabled={isSubmitting || loading || !sortedInputs.length}
+      >
+        {isSubmitting ? "Predicting..." : "Predict"}
+      </button>
+    </form>
   );
 };
-

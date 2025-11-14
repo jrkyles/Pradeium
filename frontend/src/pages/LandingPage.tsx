@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { HeroSection } from "../components/HeroSection";
 import { StorySection } from "../components/StorySection";
-import { DemoForm } from "../components/DemoForm";
 import { fetchSummary } from "../api";
 import type { InputFieldMeta, SummaryResponse } from "../types/api";
+import { BrandHeader } from "../components/BrandHeader";
 
 export const LandingPage = () => {
   const [summary, setSummary] = useState<SummaryResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [showForm, setShowForm] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const loadSummary = async () => {
@@ -25,13 +25,23 @@ export const LandingPage = () => {
     loadSummary();
   }, []);
 
-  const handleDemoClick = () => {
-    setShowForm(true);
-    const formElement = document.querySelector(".demo-form");
-    formElement?.scrollIntoView({ behavior: "smooth" });
-  };
+  useEffect(() => {
+    const updateScroll = () => {
+      const progress = Math.min(
+        window.scrollY / Math.max(window.innerHeight, 1),
+        1
+      );
+      setScrollProgress(progress);
+    };
+    updateScroll();
+    window.addEventListener("scroll", updateScroll, { passive: true });
+    return () => window.removeEventListener("scroll", updateScroll);
+  }, []);
 
-  const inputs: InputFieldMeta[] = summary?.inputs ?? [];
+  const inputs: InputFieldMeta[] = useMemo(
+    () => summary?.inputs ?? [],
+    [summary]
+  );
   const stats =
     summary?.stats ?? {
       medianNOI: "—",
@@ -41,17 +51,22 @@ export const LandingPage = () => {
     };
 
   return (
-    <main>
-      <HeroSection onDemoClick={handleDemoClick} />
-      <div className="transition-panel" />
-      <StorySection stats={stats} onDemoClick={handleDemoClick} />
-      <DemoForm
-        inputs={inputs}
-        isVisible={showForm}
-        loading={loading}
-        summaryError={error}
-      />
-    </main>
+    <>
+      <BrandHeader isVisible={scrollProgress > 0.25} />
+      <main className="landing-layout">
+        <HeroSection
+          inputs={inputs}
+          loading={loading}
+          summaryError={error}
+          fadeProgress={scrollProgress}
+        />
+        <StorySection
+          stats={stats}
+          inputs={inputs}
+          loading={loading}
+          summaryError={error}
+        />
+      </main>
+    </>
   );
 };
-

@@ -18,12 +18,16 @@ export const PredictionPage = () => {
   }
 
   return (
-    <section className="prediction-page">
+    <section className="prediction-view">
       <div className="prediction-card">
-        <p className="eyebrow">Most likely grade</p>
+        <p className="eyebrow">Predicted letter grade</p>
         <h1>{prediction.rating}</h1>
         <p className="probability">
           {(prediction.probability * 100).toFixed(1)}% confidence
+        </p>
+        <p>
+          Praedium surfaces the most probable outcome while allowing you to step
+          through the full probability distribution on the right.
         </p>
         <div className="prediction-actions">
           <Link to="/" className="link-btn">
@@ -34,12 +38,11 @@ export const PredictionPage = () => {
           </Link>
         </div>
       </div>
-      <div className="prediction-chart">
+      <div className="prediction-chart-card">
         <h3>Probability distribution</h3>
         <ProbabilityChart data={prediction.distribution} />
       </div>
     </section>
   );
 };
-
 
