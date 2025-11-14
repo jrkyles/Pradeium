@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+    <h3>Take a look at some of the data we used to build our program!</h3>
+    <p>Average Loan amount: {{loan_amount}}</p>
+    <p>Average Loan Term: {{loan_term}}</p>
+    <h3>Take a look at our typical applicant!</h3>
+    <p>Average Applicant Annual Income: {{applicant_income}}</p>
+    <p>Average Applicant Credit Score: {{applicant_credit_score}}</p>
+    <form action="/submit_feature_inputs" method="POST">
+        Visualize the Correlation between Credit Rating and this factor:
+        <select name="feature">
+        {% for l in features %} {% if l == 'credit_score': %}
+                <option value="{{l}}" selected="">{{l}}</option>
+            {% else: %}
+                <option value="{{l}}">{{l}}</option>
+            {% endif %} {% endfor %}
+        </select>
+<!--    <input type="text" name="locale" placeholder="Enter a locale">-->
+
+
+
+            <p><input type="submit" value="Submit"></p>
+        </form>
+    </body>
+</html>

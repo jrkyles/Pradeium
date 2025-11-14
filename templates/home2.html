@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+    <h3>Take a look at some of the data we used to build our program!</h3>
+    <p>Median Net Operating Income: {{NOI}}</p>
+    <p>Median Leverage Ratio: {{Leverage}}</p>
+    <h3>Take a look at our typical applicant!</h3>
+    <p>Median Interest Coverage Ratio: {{Int_Coverage}}</p>
+    <p>Average Applicant Credit Score: {{Defaults}}</p>
+    <form action="/submit_feature_inputs" method="POST">
+        Visualize the Correlation between Credit Rating and our dataset factors:
+        <select name="Visualize">
+        {% for l in features %} {% if l == 'NOI': %}
+                <option value="{{l}}" selected="">{{l}}</option>
+            {% else: %}
+                <option value="{{l}}">{{l}}</option>
+            {% endif %} {% endfor %}
+        </select>
+<!--    <input type="text" name="locale" placeholder="Enter a locale">-->
+
+
+
+            <p><input type="submit" value="Submit"></p>
+        </form>
+    </body>
+</html>

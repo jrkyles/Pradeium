@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Praedium</title>
+    </head>
+    <body>
+        <h1>Credit Rating Correlation</h1>
+            <img src="data:image/png;base64,{{ chart_data }}"
+            alt="Plot for {{ feature }}"
+            style="max-width:100%; height:auto; display:block; margin:0 auto;">
+        <h2>Use the Praedium Credit Rating Progam to estimate your assets risk profile!</h2>
+            <p>Please Input your info below:</p>
+        <form action="/submit_projection" method="POST">
+                <label for="NOI">NOI:</label>
+                <input type="text" name=" NOI " id="NOI" placeholder="2000 - 4,000,000">
+
+                <label for="Interest Expense">Interest Expense:</label>
+                <input type="text" name=" Interest Expense " id='Interest Expense' placeholder="323.47 - 839633.33.0">
+
+                <label for="Total Debt">Total Debt:</label>
+                <input type="text" name=" Total Debt " id='Total Debt' placeholder="9465.0 - 29351729.0">
+
+
+                <label for="Total Equity">Total Equity:</label>
+                <input type="text" name=" Total Equity " id='Total Equity' placeholder="7835.8 - 31823418.0">
+
+                <label for="Cash">Cash</label>
+                <input type="text" name=" Cash " id='Cash' placeholder="200 - 1,000,000.0">
+
+                <label for="Total Assets">Total Assets:</label>
+                <input type="text" name=" Total Assets " id='Total Assets' placeholder="17300.8 - 55336920.0">
+
+                <label for="Interest_Expense_Coverage_Ratio">Interest_Expense_Coverage_Ratio:</label>
+                <input type="text" name="Interest_Expense_Coverage_Ratio" id='Interest_Expense_Coverage_Ratio' placeholder="1.09 - 27.53">
+
+                <label for="Total_Leverage_Ratio">Total_Leverage_Ratio:</label>
+                <input type="text" name="Total_Leverage_Ratio" id='Total_Leverage_Ratio' placeholder="3.0 - 20.47">
+
+                <label for="Debt_to_Equity_Ratio">Debt_to_Equity_Ratio:</label>
+                <input type="text" name="Debt_to_Equity_Ratio" id='Debt_to_Equity_Ratio' placeholder="0.35 - 8.61">
+
+                <label for="EBITDA_Asset_Ratio">EBITDA_Asset_Ratio:</label>
+                <input type="text" name="EBITDA_Asset_Ratio" id='EBITDA_Asset_Ratio' placeholder="0.02 - 0.16">
+
+                <label for="EBITDA_Equity_Ratio">EBITDA_Equity_Ratio:</label>
+                <input type="text" name="EBITDA_Equity_Ratio" id='EBITDA_Equity_Ratio' placeholder="0.04 - 1.16">
+
+                <input type="submit" value="Submit">
+
+        </form>
+
+    </body>
+</html>
