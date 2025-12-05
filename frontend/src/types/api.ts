@@ -1,18 +1,21 @@
 export type InputFieldMeta = {
   key: string;
   label: string;
-  min: number;
-  max: number;
-  median: number;
+  type: "numeric" | "categorical";
+  min?: number;
+  max?: number;
+  median?: number;
+  options?: string[];
 };
 
 export type SummaryResponse = {
   message: string;
   stats: {
-    medianNOI: string;
-    medianInterestCoverage: string;
-    medianLeverage: string;
-    medianDefaultRate: string;
+    medianLTV: string;
+    medianDSCR: string;
+    medianLoanSize: string;
+    medianNoteRate: string;
+    medianPropertyAge: string;
   };
   inputs: InputFieldMeta[];
   features: string[];
@@ -33,5 +36,4 @@ export type PredictionResponse = {
 export type CorrelationResponse = {
   chart: string;
 };
-
 

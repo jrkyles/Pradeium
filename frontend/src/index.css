@@ -2,16 +2,16 @@
 
 :root {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #0b1f1a;
-  background-color: #f6f5f2;
+  color: #1c1238;
+  background-color: #f7f4ff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --praedium-ink: #0b1f1a;
-  --praedium-forest: #0f3d2f;
-  --praedium-night: #040d09;
-  --praedium-sand: #f6f5f2;
+  --praedium-ink: #1c1238;
+  --praedium-forest: #6c3fd6;
+  --praedium-night: #0d0630;
+  --praedium-sand: #f7f4ff;
   --praedium-cloud: #ffffff;
 }
 

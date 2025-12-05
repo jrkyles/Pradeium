@@ -3,10 +3,11 @@ import { PredictivePanel } from "./PredictivePanel";
 
 type StorySectionProps = {
   stats: {
-    medianNOI: string;
-    medianInterestCoverage: string;
-    medianLeverage: string;
-    medianDefaultRate: string;
+    medianLTV: string;
+    medianDSCR: string;
+    medianLoanSize: string;
+    medianNoteRate: string;
+    medianPropertyAge: string;
   };
   inputs: InputFieldMeta[];
   loading?: boolean;
@@ -23,43 +24,51 @@ export const StorySection = ({
     <div className="story-grid">
       <article className="story-panel">
         <p className="eyebrow">Our story</p>
-        <h2>Built with institutional research rigor.</h2>
+        <h2>Multifamily delinquency intelligence, productized.</h2>
         <p>
-          Praedium started as a USC research initiative focused on explaining how
-          operating statements translate to commercial mortgage outcomes. The
-          platform now blends investment-banking detail with design-grade UI so
-          teams can test conviction faster.
+          Praedium started as a USC research initiative studying how Fannie/Freddie
+          multifamily collateral migrates into 60+ day delinquency. The platform
+          now blends that research with design-grade UI so teams can test scenarios
+          before credit committees ever meet.
         </p>
       </article>
       <article className="story-panel">
-        <h3>The build process</h3>
+        <h3>Build process</h3>
         <p>
-          Every feature is engineered, standardized, and benchmarked against
-          historical grade outcomes. We stress check the model weekly against
-          market moves and publish explainers for each driver.
+          Every feature—loan size, structure, occupancy, and property age—is
+          cleaned, standardized, and benchmarked against historical delinquency
+          outcomes. Weekly retrains keep pace with rate moves and IO burn-off.
         </p>
       </article>
       <article className="story-panel">
         <h3>Data sourcing</h3>
         <p>
-          Operating statements, sponsor submissions, and public market filings
-          are cleaned into a shared schema. Median default rate ({stats.medianDefaultRate})
-          anchors our loss assumptions while NOI ({stats.medianNOI}) and leverage
-          ({stats.medianLeverage}x) set the credit posture.
+          Agency performance tapes and servicer updates are cleaned into a shared
+          schema. Median LTV ({stats.medianLTV}) and DSCR ({stats.medianDSCR}) frame
+          credit posture while loan size ({stats.medianLoanSize}) and property age
+          ({stats.medianPropertyAge}) calibrate the base case.
         </p>
       </article>
       <article className="story-panel stats">
         <div>
-          <span>Median NOI</span>
-          <strong>{stats.medianNOI}</strong>
+          <span>Median loan size</span>
+          <strong>{stats.medianLoanSize}</strong>
         </div>
         <div>
-          <span>Interest coverage</span>
-          <strong>{stats.medianInterestCoverage}x</strong>
+          <span>Loan-to-value</span>
+          <strong>{stats.medianLTV}</strong>
         </div>
         <div>
-          <span>Net leverage</span>
-          <strong>{stats.medianLeverage}x</strong>
+          <span>Debt service coverage</span>
+          <strong>{stats.medianDSCR}</strong>
+        </div>
+        <div>
+          <span>Note rate</span>
+          <strong>{stats.medianNoteRate}</strong>
+        </div>
+        <div>
+          <span>Property age</span>
+          <strong>{stats.medianPropertyAge}</strong>
         </div>
       </article>
     </div>
@@ -71,8 +80,6 @@ export const StorySection = ({
         inputs={inputs}
         loading={loading}
         summaryError={summaryError}
-        title="Demo the model from this section"
-        subtitle="The morphing panel mirrors the hero experience so teams can launch a scenario anywhere on the page."
       />
     </div>
   </section>

@@ -44,10 +44,11 @@ export const LandingPage = () => {
   );
   const stats =
     summary?.stats ?? {
-      medianNOI: "—",
-      medianInterestCoverage: "—",
-      medianLeverage: "—",
-      medianDefaultRate: "—",
+      medianLTV: "—",
+      medianDSCR: "—",
+      medianLoanSize: "—",
+      medianNoteRate: "—",
+      medianPropertyAge: "—",
     };
 
   return (

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ feature }}</title>
+    </head>
+    <body>
+        <h1>Praedium Credit Risk Projection</h1>
+        <img src="data:image/png;base64,{{ chart_data }}"
+             alt="PD gauge"
+             style="max-width:100%; height:auto;">
+        <h3>Based on your information the loan is graded at the: {{risk_grade}} with the following probability: {{probability}}</h3>
+
+    </body>
+</html>

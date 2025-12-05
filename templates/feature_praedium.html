@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Praedium</title>
+    </head>
+    <body>
+        <h1>Credit Rating Correlation</h1>
+
+        <img src="data:image/png;base64,{{ chart_data }}"
+             alt="Plot for {{ feature }}"
+             style="max-width:100%; height:auto; display:block; margin:0 auto;">
+
+        <h2>Use the Praedium Credit Rating Program to estimate your asset's risk profile!</h2>
+        <p>Please input your info below:</p>
+
+        <form action="/submit_projection" method="POST">
+
+            {% for f in numeric_features %}
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ f }}">{{ f }}:</label>
+                    <input type="text"
+                           name="{{ f }}"
+                           id="{{ f }}"
+                           placeholder="">
+                </div>
+            {% endfor %}
+
+            {% for f, options in categorical_features.items() %}
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ f }}">{{ f }}:</label>
+                    <select name="{{ f }}" id="{{ f }}">
+                        {% for opt in options %}
+                            <option value="{{ opt }}">{{ opt }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            {% endfor %}
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </body>
+</html>

@@ -1,42 +1,92 @@
+import { useEffect, useState } from "react";
+import clsx from "clsx";
 import { Link } from "react-router-dom";
 import { ProbabilityChart } from "../components/ProbabilityChart";
 import { usePrediction } from "../context/PredictionContext";
+import { fetchSummary } from "../api";
+import type { InputFieldMeta } from "../types/api";
+import { PredictivePanel } from "../components/PredictivePanel";
 
 export const PredictionPage = () => {
   const { prediction } = usePrediction();
+  const [inputs, setInputs] = useState<InputFieldMeta[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [panelOpen, setPanelOpen] = useState(false);
+
+  useEffect(() => {
+    if (!panelOpen || inputs.length) {
+      return;
+    }
+    const loadInputs = async () => {
+      try {
+        setLoading(true);
+        const summary = await fetchSummary();
+        setInputs(summary.inputs ?? []);
+        setError(null);
+      } catch {
+        setError("Unable to load inputs");
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadInputs();
+  }, [panelOpen, inputs.length]);
 
   if (!prediction) {
     return (
       <section className="prediction-page empty">
         <h2>No projection yet</h2>
         <p>Start from the landing page to submit financials and run Praedium.</p>
-        <Link to="/" className="primary-btn">
-          Back to landing
-        </Link>
+        <button className="primary-btn" onClick={() => setPanelOpen(true)}>
+          Run a scenario
+        </button>
       </section>
     );
   }
 
   return (
     <section className="prediction-view">
-      <div className="prediction-card">
+      <div className={clsx("prediction-card", panelOpen && "expanded")}>
         <p className="eyebrow">Predicted letter grade</p>
         <h1>{prediction.rating}</h1>
         <p className="probability">
-          {(prediction.probability * 100).toFixed(1)}% confidence
+          {(prediction.probability * 100).toFixed(1)}% delinquency probability
         </p>
         <p>
-          Praedium surfaces the most probable outcome while allowing you to step
-          through the full probability distribution on the right.
+          Grades are mapped from the probability of a 60+ day delinquency event.
+          Use the distribution to see how risk shifts as you adjust structure
+          and property inputs.
         </p>
         <div className="prediction-actions">
-          <Link to="/" className="link-btn">
-            Run another scenario
-          </Link>
-          <Link to="/insights" className="primary-btn secondary">
-            View feature correlations
-          </Link>
+          <button
+            className="scenario-btn"
+            type="button"
+            onClick={() => setPanelOpen((prev) => !prev)}
+          >
+            {panelOpen ? "Hide input panel" : "Run another scenario"}
+          </button>
         </div>
+        <div
+          className={clsx("prediction-inline-panel", panelOpen && "open")}
+          aria-hidden={!panelOpen}
+        >
+          {panelOpen && (
+            <PredictivePanel
+              variant="inline"
+              inputs={inputs}
+              loading={loading}
+              summaryError={error}
+              inlineLabel="Enter scenario"
+              autoOpen={panelOpen}
+              onRequestClose={() => setPanelOpen(false)}
+              hideTrigger
+            />
+          )}
+        </div>
+        <Link to="/insights" className="primary-btn secondary">
+          How it works
+        </Link>
       </div>
       <div className="prediction-chart-card">
         <h3>Probability distribution</h3>
@@ -45,4 +95,3 @@ export const PredictionPage = () => {
     </section>
   );
 };
-

@@ -15,9 +15,8 @@ export const ProbabilityChart = ({ data }: ProbabilityChartProps) => (
           tickFormatter={(val) => `${Math.round(val * 100)}%`}
         />
         <Tooltip formatter={(value: number) => `${(value * 100).toFixed(1)}%`} />
-        <Bar dataKey="probability" fill="#0f3d2f" radius={[12, 12, 0, 0]} />
+        <Bar dataKey="probability" fill="#6c3fd6" radius={[12, 12, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   </div>
 );
-
