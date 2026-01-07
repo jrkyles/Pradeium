@@ -275,6 +275,10 @@ def render_correlation_chart(df: pd.DataFrame, features: List[str]) -> str:
     tmp["target_str"] = tmp[TARGET_COLUMN].map({0: "Non-delinquent", 1: "Delinquent"})
     numeric_features = [f for f in features if f in INPUT_NUMERIC_FEATURES]
 
+    purple = "#6c3fd6"
+    silver = "#b0b4c3"
+    sn.set_theme(style="whitegrid", context="talk")
+
     for ax, col in zip(axes, features):
         if col in numeric_features:
             sn.stripplot(
@@ -282,7 +286,7 @@ def render_correlation_chart(df: pd.DataFrame, features: List[str]) -> str:
                 x="target_str",
                 y=col,
                 hue="target_str",
-                palette={"Non-delinquent": "#4c72b0", "Delinquent": "#dd8452"},
+                palette={"Non-delinquent": silver, "Delinquent": purple},
                 dodge=False,
                 alpha=0.45,
                 ax=ax,
@@ -296,7 +300,7 @@ def render_correlation_chart(df: pd.DataFrame, features: List[str]) -> str:
                     ["Non-delinquent", "Delinquent"],
                     fontsize=8,
                     loc="upper right",
-            )
+                )
         else:
             stats = (
                 tmp.groupby(col)["target_num"]
@@ -309,28 +313,25 @@ def render_correlation_chart(df: pd.DataFrame, features: List[str]) -> str:
                 x=col,
                 y="default_rate",
                 ax=ax,
-                color="#4c72b0",
+                color=purple,
             )
             ax.set_xlabel("")
             ax.set_ylabel("Delinquency rate")
             ax.set_title(PRETTY_LABELS.get(col, col))
             ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha="right")
-            for idx, row in stats.iterrows():
-                ax.text(
-                    idx,
-                    row["default_rate"] + 0.005,
-                    f"{int(row['count'])}",
-                    ha="center",
-                    va="bottom",
-                    fontsize=8,
-                )
 
     for extra_ax in axes[len(features) :]:
         fig.delaxes(extra_ax)
 
+    fig.set_facecolor("none")
+    for ax in axes:
+        ax.set_facecolor("none")
+        ax.grid(alpha=0.15)
+        for spine in ax.spines.values():
+            spine.set_alpha(0.2)
     plt.tight_layout()
     buf = io.BytesIO()
-    fig.savefig(buf, format="png", dpi=120, bbox_inches="tight")
+    fig.savefig(buf, format="png", dpi=144, bbox_inches="tight", facecolor="none")
     buf.seek(0)
     plt.close(fig)
     return base64.b64encode(buf.read()).decode("utf-8")

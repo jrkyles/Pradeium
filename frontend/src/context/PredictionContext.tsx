@@ -11,6 +11,7 @@ import type { PredictionResponse } from "../types/api";
 
 type PredictionContextValue = {
   prediction: PredictionResponse | null;
+  lastPrediction: PredictionResponse | null;
   setPrediction: (prediction: PredictionResponse | null) => void;
 };
 
@@ -22,33 +23,52 @@ export const PredictionProvider = ({ children }: { children: ReactNode }) => {
   const [prediction, setPredictionState] = useState<PredictionResponse | null>(
     null
   );
+  const [lastPrediction, setLastPrediction] =
+    useState<PredictionResponse | null>(null);
 
   const setPrediction = useCallback((value: PredictionResponse | null) => {
-    setPredictionState(value);
+    setPredictionState((current) => {
+      if (value && current) {
+        setLastPrediction(current);
+        sessionStorage.setItem("praedium.prediction.last", JSON.stringify(current));
+      }
+      return value;
+    });
     if (value) {
-      sessionStorage.setItem("praedium.prediction", JSON.stringify(value));
+      sessionStorage.setItem("praedium.prediction.current", JSON.stringify(value));
     } else {
-      sessionStorage.removeItem("praedium.prediction");
+      sessionStorage.removeItem("praedium.prediction.current");
+      sessionStorage.removeItem("praedium.prediction.last");
+      setLastPrediction(null);
     }
   }, []);
 
   useEffect(() => {
-    const stored = sessionStorage.getItem("praedium.prediction");
-    if (stored && !prediction) {
+    const storedCurrent = sessionStorage.getItem("praedium.prediction.current");
+    const storedLast = sessionStorage.getItem("praedium.prediction.last");
+    if (storedCurrent && !prediction) {
       try {
-        setPredictionState(JSON.parse(stored));
+        setPredictionState(JSON.parse(storedCurrent));
       } catch {
-        sessionStorage.removeItem("praedium.prediction");
+        sessionStorage.removeItem("praedium.prediction.current");
       }
     }
-  }, [prediction]);
+    if (storedLast && !lastPrediction) {
+      try {
+        setLastPrediction(JSON.parse(storedLast));
+      } catch {
+        sessionStorage.removeItem("praedium.prediction.last");
+      }
+    }
+  }, [prediction, lastPrediction]);
 
   const value = useMemo(
     () => ({
       prediction,
+      lastPrediction,
       setPrediction,
     }),
-    [prediction, setPrediction]
+    [prediction, lastPrediction, setPrediction]
   );
 
   return (
@@ -65,4 +85,3 @@ export const usePrediction = (): PredictionContextValue => {
   }
   return context;
 };
-

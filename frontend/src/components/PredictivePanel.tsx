@@ -25,12 +25,19 @@ const PredictivePanelComponent = ({
   hideTrigger = false,
 }: PredictivePanelProps) => {
   const [open, setOpen] = useState(autoOpen);
+  const [randomizeKey, setRandomizeKey] = useState(0);
 
   useEffect(() => {
     setOpen(autoOpen);
+    if (autoOpen) {
+      setRandomizeKey((prev) => prev + 1);
+    }
   }, [autoOpen]);
 
-  const handleOpen = useCallback(() => setOpen(true), []);
+  const handleOpen = useCallback(() => {
+    setOpen(true);
+    setRandomizeKey((prev) => prev + 1);
+  }, []);
   const handleClose = useCallback(() => {
     setOpen(false);
     onRequestClose?.();
@@ -63,6 +70,7 @@ const PredictivePanelComponent = ({
           loading={loading}
           summaryError={summaryError}
           onBack={handleClose}
+          randomizeKey={randomizeKey}
         />
       </div>
     </div>

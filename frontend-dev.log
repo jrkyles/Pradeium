@@ -1,0 +1,552 @@
+
+> frontend@0.0.0 dev
+> vite --host 0.0.0.0
+
+
+  VITE v7.2.2  ready in 193 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://10.24.59.177:5173/
+3:14:20 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+3:14:28 AM [vite] (client) hmr update /src/components/StorySection.tsx
+3:14:31 AM [vite] (client) hmr update /src/pages/LandingPage.tsx
+3:14:42 AM [vite] (client) hmr update /src/App.css
+3:14:49 AM [vite] (client) hmr update /src/App.css
+3:14:58 AM [vite] (client) hmr update /src/App.css
+3:15:02 AM [vite] (client) hmr update /src/App.css
+3:15:06 AM [vite] (client) hmr update /src/App.css
+3:23:28 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+3:23:38 AM [vite] (client) hmr update /src/pages/LandingPage.tsx
+3:24:11 AM [vite] (client) hmr update /src/App.css
+3:24:18 AM [vite] (client) hmr update /src/App.css
+3:24:28 AM [vite] (client) hmr update /src/App.css
+3:24:37 AM [vite] (client) hmr update /src/App.css
+3:24:48 AM [vite] (client) hmr update /src/App.css
+3:25:18 AM [vite] (client) hmr update /src/App.css
+3:25:27 AM [vite] (client) hmr update /src/App.css
+3:25:51 AM [vite] (client) hmr update /src/App.css
+3:26:05 AM [vite] (client) hmr update /src/components/BrandHeader.tsx
+3:26:28 AM [vite] (client) hmr update /src/pages/LandingPage.tsx
+3:26:42 AM [vite] (client) hmr update /src/App.css
+10:43:29 AM [vite] (client) hmr update /src/pages/LandingPage.tsx
+10:43:34 AM [vite] (client) hmr update /src/components/StorySection.tsx
+10:43:40 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+10:43:48 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+10:43:57 AM [vite] (client) hmr update /src/components/BrandHeader.tsx
+10:44:15 AM [vite] (client) hmr update /src/App.css
+10:49:42 AM [vite] (client) hmr update /src/pages/LandingPage.tsx
+10:49:48 AM [vite] (client) hmr update /src/App.css
+10:49:56 AM [vite] (client) hmr update /src/App.css
+10:50:00 AM [vite] (client) hmr update /src/App.css
+1:14:40 AM [vite] (client) hmr update /src/App.css
+1:14:40 AM [vite] (client) hmr update /src/components/BrandHeader.tsx
+1:14:40 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+1:14:40 AM [vite] (client) hmr update /src/pages/LandingPage.tsx
+1:20:08 AM [vite] (client) hmr update /src/pages/InsightsPage.tsx
+1:20:13 AM [vite] (client) hmr update /src/pages/PredictionPage.tsx
+1:20:39 AM [vite] (client) hmr update /src/App.css
+1:24:04 AM [vite] (client) hmr update /src/pages/InsightsPage.tsx
+1:24:20 AM [vite] (client) hmr update /src/App.css
+1:25:07 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+1:25:26 AM [vite] (client) hmr update /src/App.css
+1:30:45 AM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+1:30:45 AM [vite] Internal server error: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/PredictivePanel.tsx: Identifier 'PredictivePanel' has already been declared. (70:13)
+
+  68 | };
+  69 |
+> 70 | export const PredictivePanel = memo(PredictivePanelComponent);
+     |              ^
+  71 |
+  Plugin: vite:react-babel
+  File: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/PredictivePanel.tsx:70:13
+  68 |  };
+  69 |  
+  70 |  export const PredictivePanel = memo(PredictivePanelComponent);
+     |               ^
+  71 |  
+      at constructor (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1646:19)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1612:12)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:4909:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7594:16)
+      at TypeScriptParserMixin.checkIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7590:12)
+      at TypeScriptParserMixin.checkLVal (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7527:12)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13488:10)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9805:11)
+      at TypeScriptParserMixin.parseVar (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13459:12)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9469:31)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12927:23)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14010:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9690:85)
+      at TypeScriptParserMixin.maybeParseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13969:31)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13888:29)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9446:20)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12954:27)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseModuleItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12820:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13392:36)
+      at TypeScriptParserMixin.parseBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at TypeScriptParserMixin.parseProgram (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12698:10)
+      at TypeScriptParserMixin.parseTopLevel (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12688:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14568:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:10183:18)
+      at parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14602:38)
+      at parser (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:261:32)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:189:28
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:113:33
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:287:14)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+1:30:45 AM [vite] Internal server error: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/PredictivePanel.tsx: Identifier 'PredictivePanel' has already been declared. (70:13)
+
+  68 | };
+  69 |
+> 70 | export const PredictivePanel = memo(PredictivePanelComponent);
+     |              ^
+  71 |
+  Plugin: vite:react-babel
+  File: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/PredictivePanel.tsx:70:13
+  68 |  };
+  69 |  
+  70 |  export const PredictivePanel = memo(PredictivePanelComponent);
+     |               ^
+  71 |  
+      at constructor (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1646:19)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1612:12)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:4909:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7594:16)
+      at TypeScriptParserMixin.checkIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7590:12)
+      at TypeScriptParserMixin.checkLVal (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7527:12)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13488:10)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9805:11)
+      at TypeScriptParserMixin.parseVar (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13459:12)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9469:31)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12927:23)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14010:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9690:85)
+      at TypeScriptParserMixin.maybeParseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13969:31)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13888:29)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9446:20)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12954:27)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseModuleItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12820:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13392:36)
+      at TypeScriptParserMixin.parseBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at TypeScriptParserMixin.parseProgram (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12698:10)
+      at TypeScriptParserMixin.parseTopLevel (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12688:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14568:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:10183:18)
+      at parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14602:38)
+      at parser (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:261:32)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:189:28
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:113:33
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:287:14)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+1:30:45 AM [vite] Internal server error: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/PredictivePanel.tsx: Identifier 'PredictivePanel' has already been declared. (70:13)
+
+  68 | };
+  69 |
+> 70 | export const PredictivePanel = memo(PredictivePanelComponent);
+     |              ^
+  71 |
+  Plugin: vite:react-babel
+  File: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/PredictivePanel.tsx:70:13
+  68 |  };
+  69 |  
+  70 |  export const PredictivePanel = memo(PredictivePanelComponent);
+     |               ^
+  71 |  
+      at constructor (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1646:19)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1612:12)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:4909:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7594:16)
+      at TypeScriptParserMixin.checkIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7590:12)
+      at TypeScriptParserMixin.checkLVal (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7527:12)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13488:10)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9805:11)
+      at TypeScriptParserMixin.parseVar (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13459:12)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9469:31)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12927:23)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14010:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9690:85)
+      at TypeScriptParserMixin.maybeParseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13969:31)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13888:29)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9446:20)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12954:27)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseModuleItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12820:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13392:36)
+      at TypeScriptParserMixin.parseBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at TypeScriptParserMixin.parseProgram (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12698:10)
+      at TypeScriptParserMixin.parseTopLevel (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12688:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14568:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:10183:18)
+      at parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14602:38)
+      at parser (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:261:32)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:189:28
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:113:33
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:287:14)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+1:30:55 AM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+1:31:17 AM [vite] (client) hmr update /src/App.css
+1:31:34 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+1:31:34 AM [vite] Internal server error: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/HeroSection.tsx: Identifier 'HeroSection' has already been declared. (59:13)
+
+  57 | };
+  58 |
+> 59 | export const HeroSection = memo(HeroSectionComponent);
+     |              ^
+  60 |
+  Plugin: vite:react-babel
+  File: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/HeroSection.tsx:59:13
+  57 |  };
+  58 |  
+  59 |  export const HeroSection = memo(HeroSectionComponent);
+     |               ^
+  60 |  
+      at constructor (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1646:19)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1612:12)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:4909:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7594:16)
+      at TypeScriptParserMixin.checkIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7590:12)
+      at TypeScriptParserMixin.checkLVal (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7527:12)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13488:10)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9805:11)
+      at TypeScriptParserMixin.parseVar (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13459:12)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9469:31)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12927:23)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14010:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9690:85)
+      at TypeScriptParserMixin.maybeParseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13969:31)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13888:29)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9446:20)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12954:27)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseModuleItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12820:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13392:36)
+      at TypeScriptParserMixin.parseBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at TypeScriptParserMixin.parseProgram (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12698:10)
+      at TypeScriptParserMixin.parseTopLevel (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12688:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14568:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:10183:18)
+      at parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14602:38)
+      at parser (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:261:32)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:189:28
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:113:33
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:287:14)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+1:31:34 AM [vite] Internal server error: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/HeroSection.tsx: Identifier 'HeroSection' has already been declared. (59:13)
+
+  57 | };
+  58 |
+> 59 | export const HeroSection = memo(HeroSectionComponent);
+     |              ^
+  60 |
+  Plugin: vite:react-babel
+  File: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/HeroSection.tsx:59:13
+  57 |  };
+  58 |  
+  59 |  export const HeroSection = memo(HeroSectionComponent);
+     |               ^
+  60 |  
+      at constructor (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1646:19)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1612:12)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:4909:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7594:16)
+      at TypeScriptParserMixin.checkIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7590:12)
+      at TypeScriptParserMixin.checkLVal (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7527:12)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13488:10)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9805:11)
+      at TypeScriptParserMixin.parseVar (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13459:12)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9469:31)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12927:23)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14010:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9690:85)
+      at TypeScriptParserMixin.maybeParseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13969:31)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13888:29)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9446:20)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12954:27)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseModuleItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12820:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13392:36)
+      at TypeScriptParserMixin.parseBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at TypeScriptParserMixin.parseProgram (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12698:10)
+      at TypeScriptParserMixin.parseTopLevel (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12688:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14568:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:10183:18)
+      at parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14602:38)
+      at parser (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:261:32)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:189:28
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:113:33
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:287:14)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+1:31:34 AM [vite] Internal server error: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/HeroSection.tsx: Identifier 'HeroSection' has already been declared. (59:13)
+
+  57 | };
+  58 |
+> 59 | export const HeroSection = memo(HeroSectionComponent);
+     |              ^
+  60 |
+  Plugin: vite:react-babel
+  File: /Users/milk/Downloads/Praedium_yonas_adam/frontend/src/components/HeroSection.tsx:59:13
+  57 |  };
+  58 |  
+  59 |  export const HeroSection = memo(HeroSectionComponent);
+     |               ^
+  60 |  
+      at constructor (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1646:19)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:1612:12)
+      at TypeScriptScopeHandler.declareName (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:4909:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7594:16)
+      at TypeScriptParserMixin.checkIdentifier (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7590:12)
+      at TypeScriptParserMixin.checkLVal (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:7527:12)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13488:10)
+      at TypeScriptParserMixin.parseVarId (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9805:11)
+      at TypeScriptParserMixin.parseVar (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13459:12)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at TypeScriptParserMixin.parseVarStatement (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9469:31)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12927:23)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14010:17)
+      at TypeScriptParserMixin.parseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9690:85)
+      at TypeScriptParserMixin.maybeParseExportDeclaration (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13969:31)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13888:29)
+      at TypeScriptParserMixin.parseExport (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9446:20)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12954:27)
+      at TypeScriptParserMixin.parseStatementContent (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseModuleItem (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12820:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13392:36)
+      at TypeScriptParserMixin.parseBlockBody (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at TypeScriptParserMixin.parseProgram (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12698:10)
+      at TypeScriptParserMixin.parseTopLevel (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:12688:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14568:25)
+      at TypeScriptParserMixin.parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:10183:18)
+      at parse (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/parser/lib/index.js:14602:38)
+      at parser (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:261:32)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:189:28
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:113:33
+      at step (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:287:14)
+      at /Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/Users/milk/Downloads/Praedium_yonas_adam/frontend/node_modules/gensync/index.js:223:11)
+1:31:39 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+1:31:49 AM [vite] (client) hmr update /src/components/StorySection.tsx
+1:32:00 AM [vite] (client) hmr update /src/components/DemoForm.tsx
+1:32:22 AM [vite] (client) hmr update /src/App.css
+1:32:32 AM [vite] (client) hmr update /src/components/BrandHeader.tsx
+1:32:55 AM [vite] (client) hmr update /src/App.css
+1:33:51 AM [vite] (client) hmr update /src/App.css
+1:33:57 AM [vite] (client) hmr update /src/App.css
+1:36:36 AM [vite] (client) hmr update /src/App.css
+2:00:13 AM [vite] (client) hmr update /src/components/DemoForm.tsx
+2:00:19 AM [vite] (client) hmr update /src/App.css
+2:00:32 AM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+2:00:37 AM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+2:00:45 AM [vite] (client) hmr update /src/App.css
+2:00:51 AM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+2:01:07 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+2:01:11 AM [vite] (client) hmr update /src/components/StorySection.tsx
+2:03:09 AM [vite] (client) hmr update /src/App.css
+2:03:15 AM [vite] (client) hmr update /src/App.css
+2:03:29 AM [vite] (client) hmr update /src/App.css
+2:03:36 AM [vite] (client) hmr update /src/App.css
+2:04:19 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+2:04:28 AM [vite] (client) hmr update /src/App.css
+2:04:58 AM [vite] (client) hmr update /src/App.css
+2:06:09 AM [vite] (client) hmr update /src/App.css
+2:07:20 AM [vite] (client) hmr update /src/App.css
+2:08:02 AM [vite] (client) hmr update /src/App.css
+2:08:21 AM [vite] (client) hmr update /src/App.css
+2:08:32 AM [vite] (client) hmr update /src/App.css
+2:11:43 AM [vite] (client) hmr update /src/App.css
+2:13:29 AM [vite] (client) hmr update /src/App.css
+2:15:27 AM [vite] (client) hmr update /src/App.css
+2:15:34 AM [vite] (client) hmr update /src/components/DemoForm.tsx
+2:15:40 AM [vite] (client) hmr update /src/App.css
+2:15:45 AM [vite] (client) hmr update /src/App.css
+2:20:09 AM [vite] (client) hmr update /src/App.css
+2:22:36 AM [vite] (client) hmr update /src/App.css
+2:22:36 AM [vite] (client) hmr update /src/components/DemoForm.tsx
+2:24:36 AM [vite] (client) hmr update /src/components/BrandHeader.tsx
+2:24:36 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+2:24:36 AM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+2:24:36 AM [vite] (client) hmr update /src/components/StorySection.tsx
+2:24:36 AM [vite] (client) hmr update /src/pages/InsightsPage.tsx
+2:24:36 AM [vite] (client) hmr update /src/pages/PredictionPage.tsx
+2:27:42 AM [vite] (client) hmr update /src/App.css
+2:27:51 AM [vite] (client) hmr update /src/App.css
+2:27:58 AM [vite] (client) hmr update /src/components/DemoForm.tsx
+2:28:10 AM [vite] (client) hmr update /src/App.css
+2:28:14 AM [vite] (client) hmr update /src/App.css
+2:28:29 AM [vite] (client) hmr update /src/App.css
+2:28:35 AM [vite] (client) hmr update /src/App.css
+2:29:07 AM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+2:29:29 AM [vite] (client) hmr update /src/components/DemoForm.tsx
+2:29:42 AM [vite] (client) hmr update /src/App.css
+2:29:49 AM [vite] (client) hmr update /src/App.css
+2:30:03 AM [vite] (client) hmr update /src/components/HeroSection.tsx
+2:30:14 AM [vite] (client) hmr update /src/components/StorySection.tsx
+2:32:01 AM [vite] (client) hmr update /src/App.css
+2:32:39 AM [vite] (client) hmr update /src/App.css
+8:25:08 PM [vite] (client) hmr update /src/App.css
+8:25:08 PM [vite] (client) hmr update /src/components/DemoForm.tsx
+8:25:08 PM [vite] (client) hmr update /src/components/HeroSection.tsx
+8:25:08 PM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+8:25:08 PM [vite] (client) hmr update /src/components/StorySection.tsx
+8:26:00 PM [vite] (client) hmr update /src/components/HeroSection.tsx
+8:26:14 PM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+8:26:31 PM [vite] (client) hmr update /src/components/DemoForm.tsx
+8:26:55 PM [vite] (client) hmr update /src/pages/PredictionPage.tsx
+8:27:16 PM [vite] (client) hmr update /src/pages/InsightsPage.tsx
+8:27:34 PM [vite] (client) hmr update /src/App.css
+8:28:09 PM [vite] (client) hmr update /src/App.css
+8:28:19 PM [vite] (client) hmr update /src/App.css
+8:28:30 PM [vite] (client) hmr update /src/App.css
+8:28:54 PM [vite] (client) hmr update /src/components/StorySection.tsx
+4:46:07 PM [vite] (client) hmr update /src/pages/InsightsPage.tsx
+4:46:36 PM [vite] (client) hmr update /src/pages/InsightsPage.tsx
+4:50:49 PM [vite] (client) hmr update /src/pages/InsightsPage.tsx
+4:51:05 PM [vite] (client) hmr update /src/pages/InsightsPage.tsx
+4:53:09 PM [vite] (client) hmr update /src/App.css
+4:53:33 PM [vite] (client) hmr update /src/App.css
+4:53:51 PM [vite] (client) hmr update /src/App.css
+5:03:10 PM [vite] (client) hmr update /src/App.css
+5:04:08 PM [vite] (client) hmr update /src/App.css
+5:05:11 PM [vite] (client) hmr update /src/App.css
+5:07:47 PM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+5:08:00 PM [vite] (client) hmr update /src/pages/PredictionPage.tsx
+5:08:08 PM [vite] (client) hmr update /src/pages/PredictionPage.tsx
+5:08:16 PM [vite] (client) hmr update /src/pages/PredictionPage.tsx
+5:08:24 PM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+5:08:36 PM [vite] (client) hmr update /src/App.css
+5:08:57 PM [vite] (client) hmr update /src/pages/PredictionPage.tsx
+5:09:14 PM [vite] (client) hmr update /src/pages/PredictionPage.tsx
+5:11:41 PM [vite] (client) hmr update /src/App.css
+5:13:39 PM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+5:13:46 PM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+5:15:17 PM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+5:15:23 PM [vite] (client) hmr update /src/App.css
+5:15:34 PM [vite] (client) hmr update /src/App.css
+5:15:42 PM [vite] (client) hmr update /src/App.css
+5:16:22 PM [vite] (client) hmr update /src/App.css
+5:16:55 PM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+5:17:08 PM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+5:17:26 PM [vite] (client) hmr update /src/pages/PredictionPage.tsx
+5:17:33 PM [vite] (client) hmr update /src/App.css
+5:20:49 PM [vite] (client) hmr update /src/App.css
+5:21:17 PM [vite] (client) hmr update /src/App.css
+5:21:23 PM [vite] (client) hmr update /src/App.css
+5:21:44 PM [vite] (client) hmr update /src/App.css
+5:22:02 PM [vite] (client) hmr update /src/components/PredictivePanel.tsx
+5:22:10 PM [vite] (client) hmr update /src/pages/PredictionPage.tsx
+5:23:05 PM [vite] (client) hmr update /src/App.css
+5:24:10 PM [vite] (client) hmr update /src/App.css
+5:24:24 PM [vite] (client) hmr update /src/pages/PredictionPage.tsx

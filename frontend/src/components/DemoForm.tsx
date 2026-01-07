@@ -10,6 +10,7 @@ type DemoFormProps = {
   loading?: boolean;
   summaryError?: string | null;
   onBack?: () => void;
+  randomizeKey?: number;
 };
 
 const DemoFormComponent = ({
@@ -17,6 +18,7 @@ const DemoFormComponent = ({
   loading = false,
   summaryError = null,
   onBack,
+  randomizeKey = 0,
 }: DemoFormProps) => {
   const [formValues, setFormValues] = useState<Record<string, string>>({});
   const [error, setError] = useState<string | null>(null);
@@ -36,22 +38,53 @@ const DemoFormComponent = ({
     if (!sortedInputs.length) {
       return;
     }
-    setFormValues((prev) => {
-      const next = { ...prev };
-      let changed = false;
-      sortedInputs.forEach((field) => {
-        if (next[field.key] === undefined || next[field.key] === "") {
-          if (field.type === "numeric") {
-            next[field.key] = field.median?.toString() ?? "";
-          } else if (field.type === "categorical" && field.options?.length) {
-            next[field.key] = field.options[0];
-          }
-          changed = true;
+    const next: Record<string, string> = {};
+    const riskTierRoll = Math.random();
+    const riskTier =
+      riskTierRoll < 0.33 ? "low" : riskTierRoll < 0.66 ? "mid" : "high";
+
+    const inverseRiskFields = new Set([
+      "underwritten_dscr",
+      "physical_occupancy",
+    ]);
+
+    sortedInputs.forEach((field) => {
+      if (field.type === "numeric") {
+        const min = field.min ?? 0;
+        const max = field.max ?? field.median ?? min;
+        const span = Math.max(max - min, 0);
+        const median = field.median ?? (min + max) / 2;
+        // bucket selection guided by risk tier
+        let low: number;
+        let high: number;
+        const isInverse = inverseRiskFields.has(field.key);
+        if (riskTier === "low") {
+          low = isInverse ? median : min;
+          high = isInverse ? max : min + span * 0.25;
+        } else if (riskTier === "mid") {
+          low = median - span * 0.1;
+          high = median + span * 0.1;
+        } else {
+          low = isInverse ? min : max - span * 0.25;
+          high = isInverse ? median : max;
         }
-      });
-      return changed ? next : prev;
+        if (high < low) {
+          [low, high] = [high, low];
+        }
+        const sampled = low + Math.random() * Math.max(high - low, 0);
+        // blend slightly toward median to avoid extreme tails
+        const blended = (sampled * 0.7 + median * 0.3);
+        next[field.key] = blended.toFixed(4);
+      } else if (field.type === "categorical" && field.options?.length) {
+        const opts = field.options;
+        const randomIndex = Math.floor(Math.random() * opts.length);
+        next[field.key] = opts[randomIndex];
+      } else {
+        next[field.key] = field.median?.toString() ?? "";
+      }
     });
-  }, [sortedInputs]);
+    setFormValues(next);
+  }, [sortedInputs, randomizeKey]);
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
